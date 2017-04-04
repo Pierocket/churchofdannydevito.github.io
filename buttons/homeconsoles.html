@@ -1,0 +1,207 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Nintendo Home Consoles</title>
+<style>
+* {box-sizing:border-box}
+body {font-family: ;
+	background-color: lightblue;
+	font-family: "Comic Sans MS";
+}
+.mySlides {display:none}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+
+<body>
+<h2>Nintendo Home Consoles</h2>
+<p>This slideshow shows every Nintendo home console since 1977.</p>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 11</div>
+  <img src="images/tvgame.png" alt="" style="height:600px;align-content:center;">
+  <div class="text">Computer TV Game, 1977</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 11</div>
+  <img src="images/famicom.png" style="height:600px; align-content:center;">
+  <div class="text">Family Computer (Famicom), 1982</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 11</div>
+  <img src="images/nes.png" style="height:600px;align-content:center;">
+  <div class="text">Nintendo Entertainment System (NES), 1984</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">4 / 11</div>
+  <img src="images/superfamicom.png" style="height:600px;align-content:center;">
+  <div class="text">Super Famicom, 1990</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">5 / 11</div>
+  <img src="images/snes.png" style="height:600px;align-content:center;">
+  <div class="text">Super Nintendo Entertainment System (SNES), 1991</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">6 / 11</div>
+  <img src="images/virtualboy.png" style="height:600px;align-content:center;">
+  <div class="text">Virtual Boy, 1995</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">7 / 11</div>
+  <img src="images/n64.png" style="height:600px;align-content:center;">
+  <div class="text">Nintendo 64, 1996</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">8 / 11</div>
+  <img src="images/gamecube.png" style="height:600px;align-content:center;">
+  <div class="text">Nintendo Gamecube, 2001</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">9 / 11</div>
+  <img src="images/wii.png" style="height:600px;align-content:center;">
+  <div class="text">Nintendo Wii, 2005</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">10 / 11</div>
+  <img src="images/wiiu.png" style="height:600px;align-content:center;">
+  <div class="text">Wii U, 2013</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">11 / 11</div>
+  <img src="images/nx.png" style="height:600px;align-content:center;">
+  <div class="text">Nintendo NX, 2016(Projected)</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+<button onclick = "minusSlides(1)">Back</button>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <button onclick = "plusSlides(1)">Forward</button>
+</div>
+
+<table id = "link" align="center" border="1" bordercolor="#FFFFFF">
+<tr>
+<th> <a href="../index.html">Back to Weird</a></th>
+</tr>
+<tr>
+<th><a href="portables.html">Portable Consoles</a></th>
+ </tr> 
+</table>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+function minusSlides(n) {
+  showSlides(slideIndex -= n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1} 
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; 
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
